@@ -1,0 +1,291 @@
+@import url("//hello.myfonts.net/count/337d35");
+
+@font-face {
+	font-family: 'MuseoSansRounded';
+	src: 	url('../fonts/337D35_0_0.eot');
+	src: 	url('../fonts/337D35_0_0.eot?#iefix') format('embedded-opentype'),
+			 	url('../fonts/337D35_0_0.woff2') format('woff2'),
+			 	url('../fonts/337D35_0_0.woff') format('woff'),
+				url('../fonts/337D35_0_0.ttf') format('truetype');
+	font-weight: 900;
+}
+  
+@font-face {
+	font-family: 'MuseoSansRounded';
+	src: 	url('../fonts/337D35_1_0.eot');
+	src: 	url('../fonts/337D35_1_0.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/337D35_1_0.woff2') format('woff2'),
+				url('../fonts/337D35_1_0.woff') format('woff'),
+				url('../fonts/337D35_1_0.ttf') format('truetype');
+	font-weight: 100;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+.landing-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	//align-items: center;
+}
+
+.bgplayer {
+	background-position: center center;
+	background-size: cover;
+	position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.height-dependent {
+	width: auto;
+	height: 100%;
+}
+
+.width-dependent {
+	height: auto;
+	width: 100%;	
+}
+
+.nav-circle {
+	position: relative;
+}
+
+.nav-circle-out {
+  width: 144px;
+	height: 144px;
+	opacity: 0.2;
+	border: solid 1px #fff;
+	border-radius: 144px;
+	min-width: 144px;
+}
+
+.nav-circle-in {
+	width: 60px;
+  height: 60px;
+  border: solid 2px #fff;
+  border-radius: 60px;
+  //margin: 40px auto;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-left {
+	margin-left: 8px;
+	display: block;
+}
+
+.arrow-right {
+	display: block;
+}
+
+.nav-text {
+	position: fixed;
+  font: 900 50px 'MuseoSansRounded';
+  line-height: 1.2;
+  letter-spacing: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+  text-transform: uppercase;
+}
+
+// .nav-text-slide-left {
+// 	left: 330px;
+// 	//right: 0px;
+// }
+
+// .nav-text-slide-right {
+// 	right: 330px;
+// 	//left: 0px;
+// }
+
+.nav-text-left {
+	text-align: left;
+	max-width: 380px;	
+	margin-right: 20px;
+	width: 38%;
+}
+
+.nav-text-right {
+	text-align: right;
+	max-width: 426px;
+	margin-left: 20px;
+	width: 38%;
+}
+
+.left-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all .5s linear;
+	height: 100%;    
+}
+
+.right-sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	transition: all .5s linear;
+	height: 100%;    
+}
+
+.left-sidebar-menu {
+	position: fixed;
+	top: 0px;
+	left: -330px;
+	transition: all .5s linear;
+	height: 100%;
+	width: 330px;
+	background: #000;
+}
+
+.right-sidebar-menu {
+	position: fixed;
+	top: 0px;
+	right: -330px;
+	transition: all .5s linear;
+	height: 100%;
+	width: 330px;
+	background: #000;
+}
+
+.left-sidebar:hover .left-sidebar-menu {
+  left: 0;   
+}
+
+.right-sidebar:hover .right-sidebar-menu {
+  right: 0;   
+}
+
+.show-left-sidebar {
+	height: 100%;
+	position: fixed;
+	width: 20%;
+	left: 30%;
+	//background-color: #fff;
+}
+
+.show-right-sidebar {
+	height: 100%;
+	position: fixed;
+	width: 20%;
+	left: 50%;
+	//background-color: #fff;
+}
+
+@media (max-width: 1280px) {
+	.nav-text {
+	  font-size: 42px;
+	}	
+}
+
+@media (max-width: 960px) {
+	.nav-text {
+	  font-size: 28px;
+	  line-height: 1.33;
+	  letter-spacing: 3px;
+    padding: 0 20px;
+	}	
+}
+
+@media (max-width: 768px) {
+	.left-sidebar-menu {
+		left: -261px;
+		width: 261px;
+	}
+
+	.right-sidebar-menu {
+		right: -261px;
+		width: 261px;
+	}
+
+	.nav-text-slide-left {
+	left: 261px;
+	}
+
+	.nav-text-slide-right {
+	right: 261px;
+	}
+}
+
+@media (max-width: 720px) {
+	.nav-text {
+	  font-size: 24px;
+	}
+}
+
+@media (max-widht: 375px) {
+	.nav-text {
+	  font-size: 17px;
+	  line-height: 1.41;
+	  letter-spacing: 1.7px;
+	}
+
+	.nav-circle-in {
+		width: 50px;
+	  height: 50px;
+	  left: 15px;
+	  bottom: 15px;
+	}
+
+	.nav-circle-out {
+	  width: 84px;
+		height: 84px;
+	}
+
+	.left-sidebar-menu {
+		left: -282px;
+		width: 282px;
+	}
+
+	.right-sidebar-menu {
+		right: -282px;
+		width: 282px;
+	}
+
+	.nav-text-slide-left {
+		left: 282px;
+	}
+
+	.nav-text-slide-right {
+		right: 282px;
+	}
+}
+
+@media (max-widht: 320px) {
+	.nav-text {
+	  font-size: 14px;
+	  line-height: 1.29;
+	  letter-spacing: 1.4px;
+	}
+
+	.nav-circle-in {
+		width: 40px;
+	  height: 40px;
+	  //margin: 14px auto;
+	  left: 14px;
+	  bottom: 14px;
+	}
+
+	.nav-circle-out {
+	  width: 72px;
+		height: 72px;
+	}
+}
+
